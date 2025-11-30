@@ -18,7 +18,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             padding: 2rem;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
@@ -52,6 +52,34 @@
             animation: bounce 2s infinite;
         }
 
+        /* Enhanced photo styling */
+        .photo-container {
+            margin: 2rem auto;
+            max-width: 600px;
+            border: 5px solid #ff8c00;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-container:hover {
+            transform: scale(1.02);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .photo-caption {
+            background-color: rgba(255, 140, 0, 0.1);
+            padding: 1rem;
+            font-style: italic;
+            color: #333;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -79,6 +107,13 @@
     <div class="container">
         <div class="decoration">🎉</div>
         <h1>Happy New Month, Abbie Spears!</h1>
+        
+        <!-- Inserting the enhanced photo -->
+        <div class="photo-container">
+            <img src="WhatsApp Image 2025-12-01 at 00.50.22_c0d90e6e.jpg" alt="Happy New Month Celebration">
+            <div class="photo-caption">Wishing you a wonderful December full of joy and success!</div>
+        </div>
+        
         <p>Welcome to a brand new month of <span class="month">December</span>! May this month bring you joy, success, and wonderful surprises.</p>
         <p>Wishing you, Abbie, a December filled with warmth, happiness, and all the magic the holiday season has to offer.</p>
         <div class="decoration">❄️</div>
