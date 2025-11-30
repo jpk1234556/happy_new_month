@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Month - December</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #ffe5cc 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.2);
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        h1 {
+            color: #ff8c00;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            color: #333;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .month {
+            font-weight: bold;
+            color: #ff8c00;
+            font-size: 2rem;
+        }
+
+        .decoration {
+            font-size: 5rem;
+            margin: 1rem 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 1.5rem;
+            top: -20px;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(105vh); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="decoration">🎉</div>
+        <h1>Happy New Month, Abbie Spears!</h1>
+        <p>Welcome to a brand new month of <span class="month">December</span>! May this month bring you joy, success, and wonderful surprises.</p>
+        <p>Wishing you, Abbie, a December filled with warmth, happiness, and all the magic the holiday season has to offer.</p>
+        <div class="decoration">❄️</div>
+    </div>
+
+    <script>
+        // Create snowflakes for a December feel
+        function createSnowflakes() {
+            const container = document.querySelector('body');
+            const snowflakes = ['❄️', '❅', '❆', '✻', '✼'];
+            
+            setInterval(() => {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+                snowflake.style.left = Math.random() * 100 + 'vw';
+                snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                snowflake.style.opacity = Math.random();
+                
+                container.appendChild(snowflake);
+                
+                // Remove snowflake after animation completes
+                setTimeout(() => {
+                    snowflake.remove();
+                }, 10000);
+            }, 300);
+        }
+
+        // Start snowfall effect when page loads
+        window.addEventListener('load', () => {
+            createSnowflakes();
+        });
+    </script>
+</body>
+</html>
